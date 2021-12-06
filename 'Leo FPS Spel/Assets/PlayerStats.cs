@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public float walkingMovementSpeed { get; private set; } = 9f;
-    public float runningMovementSpeed { get; private set; } = 15f;
-    public float crouchingMovementSpeed { get; private set; } = 4f;
+    public float runningMovementSpeed { get; private set; } = 14f;
+    public float crouchingMovementSpeed { get; private set; } = 3.5f;
     public float gravity { get; private set; } = -9.81f;
     public float jumpHeight { get; private set; } = 3f;
 
