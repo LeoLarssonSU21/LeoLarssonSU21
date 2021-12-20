@@ -4,6 +4,7 @@ public class Gun : MonoBehaviour
 {
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;
 
     public float damage { get; private set; } = 10f;
     public float range { get; private set; } = 100f;
@@ -30,6 +31,9 @@ public class Gun : MonoBehaviour
             {
                 target.TakeDamage(damage);
             }
+
+            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impactGO, 1f);
         }
     }
 }
